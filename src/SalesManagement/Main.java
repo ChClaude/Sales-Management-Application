@@ -42,7 +42,7 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     // ArrayList containing Food items
-    private static ArrayList<FoodMenuItem> foodMenuItems;
+    static ArrayList<FoodMenuItem> foodMenuItems;
 
     // Object of AppMenu that initiates the menu containing the main functionalities
     AppMenu appMenu;
@@ -309,6 +309,9 @@ public class Main extends Application {
             MenuButton deleteButton = new MenuButton("DELETE FOOD ITEM");
 
             MenuButton sortButton = new MenuButton("SORTED LIST OF FOOD ITEMS");
+            sortButton.setOnMouseClicked(event -> {
+                AppFunctionalities.sortedListofFoodItems();
+            });
 
             MenuButton transactionButton = new MenuButton("SALES TRANSACTION");
 
@@ -371,6 +374,11 @@ public class Main extends Application {
                 alert.setHeaderText(null);
                 alert.setContentText("Food item '" + itemName.getText() + "' has been added to the menu list.");
                 alert.showAndWait();
+
+                // empty input fields
+                itemName.setText("");
+                itemsCategory.setValue("main meal");
+                itemPrice.setText("");
             });
 
 

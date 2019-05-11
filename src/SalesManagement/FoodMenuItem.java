@@ -5,7 +5,7 @@ package SalesManagement;
  *
  * @author CC DE-TCHAMBILA & CK MBUYI
  */
-public class FoodMenuItem {
+public class FoodMenuItem implements Comparable<FoodMenuItem>{
 
     private String fooItem;
     private String category;
@@ -58,5 +58,10 @@ public class FoodMenuItem {
     public String toString() {
         return String.format("FoodMenuItem = {Food item: %s, Category: %s, Price: %.2f, Sale info: %s}",
                 fooItem, category, price, saleInfo);
+    }
+
+    @Override
+    public int compareTo(FoodMenuItem o) {
+        return this.getFooItem().compareTo(o.getFooItem());
     }
 }
