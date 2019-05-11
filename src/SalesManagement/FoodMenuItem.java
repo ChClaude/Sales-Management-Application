@@ -62,6 +62,6 @@ public class FoodMenuItem implements Comparable<FoodMenuItem>{
 
     @Override
     public int compareTo(FoodMenuItem o) {
-        return this.getFooItem().compareTo(o.getFooItem());
+        return this.getFooItem().toLowerCase().compareTo(o.getFooItem().toLowerCase());
     }
 }

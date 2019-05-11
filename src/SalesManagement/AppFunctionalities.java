@@ -7,6 +7,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 /**
@@ -20,7 +21,7 @@ import java.util.Collections;
  */
 public class AppFunctionalities {
 
-    public static void sortedListOfFoodItems() {
+    public void sortedListOfFoodItems(ArrayList<FoodMenuItem> foodMenuItems) {
         Stage window = new Stage();
         window.setTitle("Sorted List of Food Items");
         window.setOnCloseRequest(event -> {
@@ -28,9 +29,7 @@ public class AppFunctionalities {
             window.close();
         });
 
-        Collections.sort(Main.foodMenuItems);
-
-        ListView itemsList = new ListView(FXCollections.observableArrayList(Main.foodMenuItems));
+        ListView itemsList = new ListView(FXCollections.observableArrayList(foodMenuItems));
 
         StackPane layout = new StackPane(itemsList);
         layout.setPrefSize(700, 400);

@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -314,7 +315,10 @@ public class Main extends Application {
 
             MenuButton sortButton = new MenuButton("SORTED LIST OF FOOD ITEMS");
             sortButton.setOnMouseClicked(event -> {
-                AppFunctionalities.sortedListOfFoodItems();
+                AppFunctionalities appFunctionalities = new AppFunctionalities();
+
+                Collections.sort(foodMenuItems);
+                appFunctionalities.sortedListOfFoodItems(foodMenuItems);
             });
 
             MenuButton transactionButton = new MenuButton("SALES TRANSACTION");
@@ -369,6 +373,7 @@ public class Main extends Application {
             // ADD item to the menu list
             Button addFoodItem = new Button("ADD");
             addFoodItem.setOnAction(event -> {
+
                 FoodMenuItem item = new FoodMenuItem(itemName.getText(), itemsCategory.getValue(),
                         Double.parseDouble(itemPrice.getText()), new Sale());
 

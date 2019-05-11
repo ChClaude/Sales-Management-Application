@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e397c9-e604-4612-891f-69e02bb3c3fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/AppFunctionalities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/AppFunctionalities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/FoodMenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/FoodMenuItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$AppMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$AppMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SalesManagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/instructions/~$P2-Term2-Project-FT.doc" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="515" column="55" selection-start-line="515" selection-start-column="55" selection-end-line="515" selection-end-column="55" />
+            <state relative-caret-position="72">
+              <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+            <state relative-caret-position="290">
+              <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,36 +142,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SalesManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -267,12 +234,12 @@
       <workItem from="1557510445260" duration="2295000" />
       <workItem from="1557512810054" duration="12557000" />
       <workItem from="1557567854797" duration="13208000" />
-      <workItem from="1557600403705" duration="10082000" />
+      <workItem from="1557600403705" duration="10939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60196000" />
+    <option name="totallyTimeSpent" value="61053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -288,7 +255,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866043" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.77880186" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.77880186" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,26 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="515" column="55" selection-start-line="515" selection-start-column="55" selection-end-line="515" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/Sale.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -396,6 +343,26 @@
           <folding>
             <element signature="e#1398#1399#0" expanded="true" />
             <element signature="e#1464#1465#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
