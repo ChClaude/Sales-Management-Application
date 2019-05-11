@@ -20,11 +20,7 @@ import java.util.Collections;
  */
 public class AppFunctionalities {
 
-    public static void deleteFoodItem() {
-
-    }
-
-    public static void sortedListofFoodItems() {
+    public static void sortedListOfFoodItems() {
         Stage window = new Stage();
         window.setTitle("Sorted List of Food Items");
         window.setOnCloseRequest(event -> {

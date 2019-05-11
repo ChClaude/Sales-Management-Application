@@ -29,6 +29,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Main.java
@@ -53,7 +55,7 @@ public class Main extends Application {
 
         // adding suggested food items
         foodMenuItems.add(new FoodMenuItem("Cheese burger", "main meal", 11.50, new Sale()));
-        foodMenuItems.add(new FoodMenuItem("Gatsby ", "main meal", 8.50, new Sale()));
+        foodMenuItems.add(new FoodMenuItem("Gatsby", "main meal", 8.50, new Sale()));
         foodMenuItems.add(new FoodMenuItem("Cappuccino", "drinks", 10.25, new Sale()));
         foodMenuItems.add(new FoodMenuItem("Hot wings", "starter", 6.00, new Sale()));
         foodMenuItems.add(new FoodMenuItem("Fish and chips", "main meal", 9.50, new Sale()));
@@ -271,13 +273,20 @@ public class Main extends Application {
     }
 
     /**
-     * This class builds the menu for the app
+     * This class builds the main menu
+     * the add sub menu
+     * as well as the delete sub menu.
+     *
+     * It also provides the different procedures to handle
+     * the above menus functionalities.
      */
     private class AppMenu extends Parent {
+
 
         public AppMenu() {
             VBox firstMenu = new VBox(15);
             Pane addMenu = new Pane();
+            Pane deleteMenu = new Pane();
 
             firstMenu.setTranslateX(100);
             firstMenu.setTranslateY(200);
@@ -285,32 +294,27 @@ public class Main extends Application {
             addMenu.setTranslateX(100);
             addMenu.setTranslateY(200);
 
+            deleteMenu.setTranslateX(100);
+            deleteMenu.setTranslateY(200);
+
+
             final int offset = 400;
             addMenu.setTranslateX(offset);
 
             // ADD button and listener
             MenuButton addButton = new MenuButton("ADD FOOD ITEM");
             addButton.setOnMouseClicked(event -> {
-                getChildren().add(addMenu);
-
-                TranslateTransition tt = new TranslateTransition(Duration.seconds(0.25), firstMenu);
-                tt.setToX(firstMenu.getTranslateX() - offset);
-
-
-                TranslateTransition tt1 = new TranslateTransition(Duration.seconds(0.5), addMenu);
-                tt1.setToX(firstMenu.getTranslateX() - 60);
-
-                tt.play();
-                tt1.play();
-
-                tt.setOnFinished(event1 -> getChildren().remove(firstMenu));
+                translateMenus(firstMenu, addMenu, offset);
             });
 
             MenuButton deleteButton = new MenuButton("DELETE FOOD ITEM");
+            deleteButton.setOnMouseClicked(event -> {
+                translateMenus(firstMenu, deleteMenu, offset);
+            });
 
             MenuButton sortButton = new MenuButton("SORTED LIST OF FOOD ITEMS");
             sortButton.setOnMouseClicked(event -> {
-                AppFunctionalities.sortedListofFoodItems();
+                AppFunctionalities.sortedListOfFoodItems();
             });
 
             MenuButton transactionButton = new MenuButton("SALES TRANSACTION");
@@ -384,19 +388,7 @@ public class Main extends Application {
 
             Button backToMainMenu = new Button("BACK");
             backToMainMenu.setOnAction(event -> {
-                getChildren().add(firstMenu);
-
-                TranslateTransition tt = new TranslateTransition(Duration.seconds(0.25), addMenu);
-                tt.setToX(addMenu.getTranslateX() + offset);
-
-
-                TranslateTransition tt1 = new TranslateTransition(Duration.seconds(0.5), firstMenu);
-                tt1.setToX(addMenu.getTranslateX() + 60);
-
-                tt.play();
-                tt1.play();
-
-                tt.setOnFinished(event1 -> getChildren().remove(addMenu));
+                reverseTranslateMenus(firstMenu, addMenu, offset);
             });
 
             hBox1.getChildren().addAll(addFoodItem, backToMainMenu);
@@ -408,6 +400,163 @@ public class Main extends Application {
 
 
             getChildren().addAll(firstMenu);
+
+            // DELETE_Menu
+            // TODO: continue customizing the delete food items menus here
+
+            VBox vBox1 = new VBox(30);
+
+            TextField searchTextField = new TextField();
+            searchTextField.setPromptText("Search for item to delete...");
+
+            Button searchButton = new Button("Search");
+
+
+            HBox hBox2 = new HBox(12, searchTextField, searchButton);
+            hBox2.setAlignment(Pos.CENTER);
+            hBox2.setPrefSize(480, 20);
+
+            VBox vBox2 = new VBox(20);
+            vBox2.setAlignment(Pos.CENTER);
+
+            Label searchResult = new Label("Item's found");
+            searchResult.setTextFill(Color.rgb(245, 245, 245));
+            searchResult.setFont(searchResult.getFont().font(18));
+            searchResult.setVisible(false);
+
+            Label foundItem = new Label("Food item \t Food item category \t Food price");
+            foundItem.setTextFill(Color.rgb(245, 245, 245));
+            foundItem.setFont(foundItem.getFont().font(18));
+            foundItem.setVisible(false);
+
+            Button deleteItemButton = new Button("DELETE ITEM");
+            deleteItemButton.setVisible(false);
+
+            Button backButton = new Button("BACK");
+
+            HBox hBox3 = new HBox(15, deleteItemButton, backButton);
+            hBox3.setAlignment(Pos.CENTER);
+
+
+            vBox2.getChildren().addAll(searchResult, foundItem, hBox3);
+            VBox.setMargin(hBox3, new Insets(15, 0, 0, 0));
+
+            vBox2.setAlignment(Pos.CENTER);
+
+            vBox1.getChildren().addAll(hBox2, vBox2);
+            VBox.setMargin(hBox2, new Insets(18, 0, 0, 0));
+
+            // Adding all the components to deleteMenu
+            Rectangle rectangle1 = new Rectangle(480, 250);
+            rectangle1.setFill(Color.BLACK);
+            rectangle1.setOpacity(0.6);
+
+            backButton.setOnAction(event -> {
+                reverseTranslateMenus(firstMenu, deleteMenu, offset);
+                searchTextField.setText("");
+                searchResult.setVisible(false);
+
+                foundItem.setVisible(false);
+                deleteItemButton.setVisible(false);
+            });
+
+            // search for item
+            AtomicInteger i = new AtomicInteger();
+            searchButton.setOnAction(event -> {
+                String checkItem = searchTextField.getText();
+
+                boolean found = false;
+
+                for (i.set(0); i.get() < foodMenuItems.size(); i.getAndIncrement()) {
+                    if (checkItem.trim().equalsIgnoreCase(foodMenuItems.get(i.get()).getFooItem().trim())) {
+                        found = true;
+                        break;
+                    }
+                }
+
+
+                if (found) {
+                    searchResult.setText("Item " + foodMenuItems.get(i.get()).getFooItem() + " found.");
+                    searchResult.setVisible(true);
+
+                    foundItem.setText(String.format("%s \t %s \t %s", foodMenuItems.get(i.get()).getFooItem(), foodMenuItems.get(i.get()).getCategory(), foodMenuItems.get(i.get()).getPrice()));
+                    foundItem.setVisible(true);
+                    deleteItemButton.setVisible(true);
+                } else {
+                    searchTextField.setText("");
+                    searchResult.setText("Item's " + checkItem + " not found.");
+                    searchResult.setVisible(true);
+
+                    foundItem.setVisible(false);
+                    deleteItemButton.setVisible(false);
+                }
+
+            });
+
+            deleteItemButton.setOnAction(event -> {
+                Dialog<ButtonType> dialog = new Dialog<>();
+                dialog.setTitle("Delete Dialog");
+                dialog.setHeaderText("You're about to delete a food item");
+                dialog.setContentText("Are you sure you want to delete " + foodMenuItems.get(i.get()).getFooItem() +
+                        " from the menu list?");
+
+                // set the button types
+                dialog.getDialogPane().getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
+
+                Optional<ButtonType> result = dialog.showAndWait();
+
+                if (result.get() == ButtonType.YES) {
+                    foodMenuItems.remove(i.get());
+                    searchTextField.setText("");
+                    searchResult.setVisible(false);
+
+                    foundItem.setVisible(false);
+                    deleteItemButton.setVisible(false);
+                } else {
+                    dialog.close();
+                    searchTextField.setText("");
+                    searchResult.setVisible(false);
+
+                    foundItem.setVisible(false);
+                    deleteItemButton.setVisible(false);
+                }
+
+            });
+
+            deleteMenu.getChildren().addAll(rectangle1, vBox1);
+
+        }
+
+        public void translateMenus(Pane firstLayout, Pane secondLayout, int offset) {
+            getChildren().add(secondLayout);
+
+            TranslateTransition tt = new TranslateTransition(Duration.seconds(0.25), firstLayout);
+            tt.setToX(firstLayout.getTranslateX() - offset);
+
+
+            TranslateTransition tt1 = new TranslateTransition(Duration.seconds(0.5), secondLayout);
+            tt1.setToX(firstLayout.getTranslateX() - 60);
+
+            tt.play();
+            tt1.play();
+
+            tt.setOnFinished(event1 -> getChildren().remove(firstLayout));
+        }
+
+        public void reverseTranslateMenus(Pane firstLayout, Pane secondLayout, int offset) {
+            getChildren().add(firstLayout);
+
+            TranslateTransition tt = new TranslateTransition(Duration.seconds(0.25), secondLayout);
+            tt.setToX(secondLayout.getTranslateX() + offset);
+
+
+            TranslateTransition tt1 = new TranslateTransition(Duration.seconds(0.5), firstLayout);
+            tt1.setToX(secondLayout.getTranslateX() + 60);
+
+            tt.play();
+            tt1.play();
+
+            tt.setOnFinished(event1 -> getChildren().remove(secondLayout));
         }
 
     }
