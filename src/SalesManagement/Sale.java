@@ -9,11 +9,11 @@ public class Sale {
     }
 
     public void incrementItemsSold() {
-
+        ++itemsSold;
     }
 
-    public void incrementTotalSalesValue(double pr) {
-
+    public void incrementTotalSalesValue(double price) {
+        totalSalesValue = getItemsSold() * price;
     }
 
     public int getItemsSold() {

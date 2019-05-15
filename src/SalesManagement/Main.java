@@ -4,6 +4,7 @@ import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -17,6 +18,7 @@ import javafx.scene.effect.Glow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.LineTo;
@@ -322,6 +324,11 @@ public class Main extends Application {
             });
 
             MenuButton transactionButton = new MenuButton("SALES TRANSACTION");
+            transactionButton.setOnMouseClicked(event -> {
+                AppFunctionalities transactionAppFunctionalities = new AppFunctionalities();
+
+                transactionAppFunctionalities.saleTransaction(foodMenuItems);
+            });
 
             MenuButton reportButton = new MenuButton("SALES REPORT");
 
