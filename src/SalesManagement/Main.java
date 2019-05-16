@@ -4,7 +4,8 @@ import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
-import javafx.event.EventHandler;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -12,13 +13,13 @@ import javafx.geometry.VPos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.effect.Glow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.LineTo;
@@ -51,6 +52,7 @@ public class Main extends Application {
 
     // Object of AppMenu that initiates the menu containing the main functionalities
     AppMenu appMenu;
+    TableView<FoodMenuItemSaleReport> tableView;
 
     public static void main(String[] args) {
 
@@ -245,11 +247,26 @@ public class Main extends Application {
                 window.close();
             });
 
+            yesButton.setOnKeyPressed(event -> {
+                if (yesButton.isFocused() && event.getCode() == KeyCode.ENTER) {
+                    exit = true;
+                    window.close();
+                }
+            });
+
             Button noButton = new Button("NO");
             noButton.setOnAction(event -> {
                 exit = false;
                 window.close();
             });
+
+            noButton.setOnKeyPressed(event -> {
+                if (noButton.isFocused() && event.getCode() == KeyCode.ENTER) {
+                    exit = false;
+                    window.close();
+                }
+            });
+
 
             HBox hBox = new HBox(10, yesButton, noButton);
             hBox.setAlignment(Pos.CENTER);
@@ -279,7 +296,7 @@ public class Main extends Application {
      * This class builds the main menu
      * the add sub menu
      * as well as the delete sub menu.
-     *
+     * <p>
      * It also provides the different procedures to handle
      * the above menus functionalities.
      */
@@ -290,6 +307,7 @@ public class Main extends Application {
             VBox firstMenu = new VBox(15);
             Pane addMenu = new Pane();
             Pane deleteMenu = new Pane();
+            Pane salesReportMenu = new Pane();
 
             firstMenu.setTranslateX(100);
             firstMenu.setTranslateY(200);
@@ -331,6 +349,9 @@ public class Main extends Application {
             });
 
             MenuButton reportButton = new MenuButton("SALES REPORT");
+            reportButton.setOnMouseClicked(event -> {
+                translateMenus(firstMenu, salesReportMenu, offset);
+            });
 
             // Exit button and listener
             MenuButton exitButton = new MenuButton("EXIT");
@@ -480,7 +501,7 @@ public class Main extends Application {
                 boolean found = false;
 
                 for (i.set(0); i.get() < foodMenuItems.size(); i.getAndIncrement()) {
-                    if (checkItem.trim().equalsIgnoreCase(foodMenuItems.get(i.get()).getFooItem().trim())) {
+                    if (checkItem.trim().equalsIgnoreCase(foodMenuItems.get(i.get()).getFoodItem().trim())) {
                         found = true;
                         break;
                     }
@@ -488,10 +509,10 @@ public class Main extends Application {
 
 
                 if (found) {
-                    searchResult.setText("Item " + foodMenuItems.get(i.get()).getFooItem() + " found.");
+                    searchResult.setText("Item " + foodMenuItems.get(i.get()).getFoodItem() + " found.");
                     searchResult.setVisible(true);
 
-                    foundItem.setText(String.format("%s \t %s \t %s", foodMenuItems.get(i.get()).getFooItem(), foodMenuItems.get(i.get()).getCategory(), foodMenuItems.get(i.get()).getPrice()));
+                    foundItem.setText(String.format("%s \t %s \t %s", foodMenuItems.get(i.get()).getFoodItem(), foodMenuItems.get(i.get()).getCategory(), foodMenuItems.get(i.get()).getPrice()));
                     foundItem.setVisible(true);
                     deleteItemButton.setVisible(true);
                 } else {
@@ -509,7 +530,7 @@ public class Main extends Application {
                 Dialog<ButtonType> dialog = new Dialog<>();
                 dialog.setTitle("Delete Dialog");
                 dialog.setHeaderText("You're about to delete a food item");
-                dialog.setContentText("Are you sure you want to delete " + foodMenuItems.get(i.get()).getFooItem() +
+                dialog.setContentText("Are you sure you want to delete " + foodMenuItems.get(i.get()).getFoodItem() +
                         " from the menu list?");
 
                 // set the button types
@@ -536,6 +557,44 @@ public class Main extends Application {
             });
 
             deleteMenu.getChildren().addAll(rectangle1, vBox1);
+
+            // Sales_Report menu
+            VBox vBox3 = new VBox(20);
+            Text salesReportMenuHeader = new Text("Joe’s Fast-Food JointJoe’s Fast-Food Joint");
+
+            // item column
+            TableColumn<FoodMenuItemSaleReport, String> itemColumn = new TableColumn<>("Item");
+            itemColumn.setMinWidth(300);
+            itemColumn.setCellValueFactory(new PropertyValueFactory<>("itemName"));
+
+            // sales count column
+            TableColumn<FoodMenuItemSaleReport, Integer> salesCountColumn = new TableColumn<>("Sales Count");
+            salesCountColumn.setMinWidth(100);
+            salesCountColumn.setCellValueFactory(new PropertyValueFactory<>("salesCount"));
+
+            // item column
+            TableColumn<FoodMenuItemSaleReport, Double> totalColumn = new TableColumn<>("Total");
+            totalColumn.setMinWidth(150);
+            totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
+
+            tableView = new TableView<>();
+            tableView.setItems(getFoodMenuItemsList());
+            tableView.getColumns().addAll(itemColumn, salesCountColumn, totalColumn);
+
+            ScrollPane scrollPane = new ScrollPane(tableView);
+
+            HBox bottomBox = new HBox(30);
+            Label totalSaleText = new Label("Today’s Total Sales:");
+            Label totalAmount = new Label();
+            bottomBox.getChildren().addAll(totalSaleText, totalAmount);
+
+            vBox3.getChildren().addAll(salesReportMenuHeader, scrollPane, bottomBox);
+
+            Rectangle rectangle2 = new Rectangle(480, 250);
+            rectangle1.setFill(Color.BLACK);
+            rectangle1.setOpacity(0.6);
+
+            salesReportMenu.getChildren().addAll(rectangle2, vBox3);
 
         }
 
@@ -569,6 +628,18 @@ public class Main extends Application {
             tt1.play();
 
             tt.setOnFinished(event1 -> getChildren().remove(secondLayout));
+        }
+
+        public ObservableList<FoodMenuItemSaleReport> getFoodMenuItemsList() {
+            ArrayList<FoodMenuItemSaleReport> foodMenuItemSaleReports = new ArrayList<>();
+
+            for (FoodMenuItem foodMenuItem : foodMenuItems) {
+                foodMenuItemSaleReports.add(new FoodMenuItemSaleReport(foodMenuItem));
+            }
+
+            ObservableList list = FXCollections.observableArrayList(foodMenuItemSaleReports);
+
+            return list;
         }
 
     }

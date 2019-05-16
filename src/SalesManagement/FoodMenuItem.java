@@ -7,7 +7,7 @@ package SalesManagement;
  */
 public class FoodMenuItem implements Comparable<FoodMenuItem>{
 
-    private String fooItem;
+    private String foodItem;
     private String category;
     private double price;
     private Sale saleInfo;
@@ -15,15 +15,15 @@ public class FoodMenuItem implements Comparable<FoodMenuItem>{
     public FoodMenuItem() {
     }
 
-    public FoodMenuItem(String fooItem, String category, double price, Sale saleInfo) {
-        this.fooItem = fooItem;
+    public FoodMenuItem(String foodItem, String category, double price, Sale saleInfo) {
+        this.foodItem = foodItem;
         this.category = category;
         this.price = price;
         this.saleInfo = saleInfo;
     }
 
-    public void setFooItem(String fooItem) {
-        this.fooItem = fooItem;
+    public void setFoodItem(String foodItem) {
+        this.foodItem = foodItem;
     }
 
     public void setCategory(String category) {
@@ -38,8 +38,8 @@ public class FoodMenuItem implements Comparable<FoodMenuItem>{
         this.saleInfo = saleInfo;
     }
 
-    public String getFooItem() {
-        return fooItem;
+    public String getFoodItem() {
+        return foodItem;
     }
 
     public String getCategory() {
@@ -57,11 +57,11 @@ public class FoodMenuItem implements Comparable<FoodMenuItem>{
     @Override
     public String toString() {
         return String.format("FoodMenuItem = {Food item: %s, Category: %s, Price: %.2f, Sale info: %s}",
-                fooItem, category, price, saleInfo);
+                foodItem, category, price, saleInfo);
     }
 
     @Override
     public int compareTo(FoodMenuItem o) {
-        return this.getFooItem().toLowerCase().compareTo(o.getFooItem().toLowerCase());
+        return this.getFoodItem().toLowerCase().compareTo(o.getFoodItem().toLowerCase());
     }
 }

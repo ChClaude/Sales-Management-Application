@@ -12,6 +12,11 @@ public class Sale {
         ++itemsSold;
     }
 
+    public void decrementItemsSold() {
+        if (itemsSold > 1)
+            --itemsSold;
+    }
+
     public void incrementTotalSalesValue(double price) {
         totalSalesValue = getItemsSold() * price;
     }
