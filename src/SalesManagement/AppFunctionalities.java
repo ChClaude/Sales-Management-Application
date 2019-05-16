@@ -13,6 +13,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * AppFunctionalities.java
@@ -111,7 +112,6 @@ public class AppFunctionalities {
         window.setScene(scene);
         window.showAndWait();
     }
-
 
 
 }

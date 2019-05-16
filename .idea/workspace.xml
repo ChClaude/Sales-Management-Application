@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e397c9-e604-4612-891f-69e02bb3c3fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/AppFunctionalities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/AppFunctionalities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$AppMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$AppMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$ExitDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$ExitDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$MenuButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$MenuButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SalesManagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
+            <state relative-caret-position="329">
+              <caret line="329" column="77" selection-start-line="329" selection-start-column="77" selection-end-line="329" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+            <state relative-caret-position="-575">
+              <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,17 +63,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/Sale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LearningJavaProgram/src/JavaFXTutorial/CustomGameMenu/GameMenuDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="288">
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <folding>
+                <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#202#203#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,12 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1128">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-              <folding>
-                <element signature="e#1398#1399#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1152">
+              <caret line="64" column="85" selection-start-line="64" selection-start-column="85" selection-end-line="64" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -125,14 +123,14 @@
         <option value="$PROJECT_DIR$/src/SalesManagement/myStyle.css" />
         <option value="$PROJECT_DIR$/src/SalesManagement/sample.fxml" />
         <option value="$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java" />
-        <option value="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" />
         <option value="$PROJECT_DIR$/src/SalesManagement/Main.java" />
+        <option value="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="806" />
+    <option name="width" value="697" />
     <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -142,7 +140,45 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SalesManagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -239,7 +275,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61053000" />
+    <option name="totallyTimeSpent" value="64684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -263,10 +299,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32872504" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.48233488" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.953917" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32872504" />
-      <window_info anchor="right" x="0" y="0" width="295" height="584" id="Documentation" side_tool="true" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -276,6 +311,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
+      <window_info anchor="right" x="0" y="0" width="295" height="584" id="Documentation" order="9" side_tool="true" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,8 +353,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/Sale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="288">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -338,19 +380,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-          <folding>
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1152">
+          <caret line="64" column="85" selection-start-line="64" selection-start-column="85" selection-end-line="64" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+        <state relative-caret-position="-575">
+          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -359,8 +397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
+        <state relative-caret-position="329">
+          <caret line="329" column="77" selection-start-line="329" selection-start-column="77" selection-end-line="329" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
