@@ -42,7 +42,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * This is the main class of the project.
  * it comprises the entry point to the program.
  *
- * @author Claude C DE-TCHAMBILA
+ * @author CC DE-TCHAMBILA & CK MBUYI
  * Date: 2019/05/11
  */
 public class Main extends Application {
@@ -53,6 +53,8 @@ public class Main extends Application {
     // Object of AppMenu that initiates the menu containing the main functionalities
     AppMenu appMenu;
     TableView<FoodMenuItemSaleReport> tableView;
+
+    Pane root;
 
     public static void main(String[] args) {
 
@@ -81,6 +83,10 @@ public class Main extends Application {
             if (exit)
                 primaryStage.close();
         });
+
+        Image iconImage = new Image("file:SalesManagement/J_Logo_1.png");
+
+        primaryStage.getIcons().add(iconImage);
 
         Pane root = new Pane();
         root.setPrefSize(850, 570);
@@ -307,7 +313,6 @@ public class Main extends Application {
             VBox firstMenu = new VBox(15);
             Pane addMenu = new Pane();
             Pane deleteMenu = new Pane();
-            Pane salesReportMenu = new Pane();
 
             firstMenu.setTranslateX(100);
             firstMenu.setTranslateY(200);
@@ -350,7 +355,9 @@ public class Main extends Application {
 
             MenuButton reportButton = new MenuButton("SALES REPORT");
             reportButton.setOnMouseClicked(event -> {
-                translateMenus(firstMenu, salesReportMenu, offset);
+                AppFunctionalities appFunctionalities = new AppFunctionalities();
+
+                appFunctionalities.salesReport();
             });
 
             // Exit button and listener
@@ -402,20 +409,28 @@ public class Main extends Application {
             Button addFoodItem = new Button("ADD");
             addFoodItem.setOnAction(event -> {
 
-                FoodMenuItem item = new FoodMenuItem(itemName.getText(), itemsCategory.getValue(),
-                        Double.parseDouble(itemPrice.getText()), new Sale());
+                FoodMenuItem item = null;
+                try {
+                    item = new FoodMenuItem(itemName.getText(), itemsCategory.getValue(),
+                            Double.parseDouble(itemPrice.getText()), new Sale());
+                    Main.foodMenuItems.add(item);
 
-                Main.foodMenuItems.add(item);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Food item '" + itemName.getText() + "' has been added to the menu list.");
+                    alert.showAndWait();
 
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText(null);
-                alert.setContentText("Food item '" + itemName.getText() + "' has been added to the menu list.");
-                alert.showAndWait();
+                    // empty input fields
+                    itemName.setText("");
+                    itemsCategory.setValue("main meal");
+                    itemPrice.setText("");
+                } catch (NumberFormatException e) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("You didn't enter a proper price");
+                    alert.showAndWait();
+                }
 
-                // empty input fields
-                itemName.setText("");
-                itemsCategory.setValue("main meal");
-                itemPrice.setText("");
+
             });
 
 
@@ -557,45 +572,6 @@ public class Main extends Application {
             });
 
             deleteMenu.getChildren().addAll(rectangle1, vBox1);
-
-            // Sales_Report menu
-            VBox vBox3 = new VBox(20);
-            Text salesReportMenuHeader = new Text("Joe’s Fast-Food JointJoe’s Fast-Food Joint");
-
-            // item column
-            TableColumn<FoodMenuItemSaleReport, String> itemColumn = new TableColumn<>("Item");
-            itemColumn.setMinWidth(300);
-            itemColumn.setCellValueFactory(new PropertyValueFactory<>("itemName"));
-
-            // sales count column
-            TableColumn<FoodMenuItemSaleReport, Integer> salesCountColumn = new TableColumn<>("Sales Count");
-            salesCountColumn.setMinWidth(100);
-            salesCountColumn.setCellValueFactory(new PropertyValueFactory<>("salesCount"));
-
-            // item column
-            TableColumn<FoodMenuItemSaleReport, Double> totalColumn = new TableColumn<>("Total");
-            totalColumn.setMinWidth(150);
-            totalColumn.setCellValueFactory(new PropertyValueFactory<>("total"));
-
-            tableView = new TableView<>();
-            tableView.setItems(getFoodMenuItemsList());
-            tableView.getColumns().addAll(itemColumn, salesCountColumn, totalColumn);
-
-            ScrollPane scrollPane = new ScrollPane(tableView);
-
-            HBox bottomBox = new HBox(30);
-            Label totalSaleText = new Label("Today’s Total Sales:");
-            Label totalAmount = new Label();
-            bottomBox.getChildren().addAll(totalSaleText, totalAmount);
-
-            vBox3.getChildren().addAll(salesReportMenuHeader, scrollPane, bottomBox);
-
-            Rectangle rectangle2 = new Rectangle(480, 250);
-            rectangle1.setFill(Color.BLACK);
-            rectangle1.setOpacity(0.6);
-
-            salesReportMenu.getChildren().addAll(rectangle2, vBox3);
-
         }
 
         public void translateMenus(Pane firstLayout, Pane secondLayout, int offset) {
@@ -628,18 +604,6 @@ public class Main extends Application {
             tt1.play();
 
             tt.setOnFinished(event1 -> getChildren().remove(secondLayout));
-        }
-
-        public ObservableList<FoodMenuItemSaleReport> getFoodMenuItemsList() {
-            ArrayList<FoodMenuItemSaleReport> foodMenuItemSaleReports = new ArrayList<>();
-
-            for (FoodMenuItem foodMenuItem : foodMenuItems) {
-                foodMenuItemSaleReports.add(new FoodMenuItemSaleReport(foodMenuItem));
-            }
-
-            ObservableList list = FXCollections.observableArrayList(foodMenuItemSaleReports);
-
-            return list;
         }
 
     }

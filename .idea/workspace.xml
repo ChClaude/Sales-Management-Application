@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e397c9-e604-4612-891f-69e02bb3c3fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SalesManagement/FoodMenuItemSaleReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SalesManagement/J_Logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/AppFunctionalities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/AppFunctionalities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/FoodMenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/FoodMenuItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$AppMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$AppMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$ExitDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$ExitDialog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$MenuButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main$MenuButton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sales_Management_App/SalesManagement/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sales_Management_App/res/instructions/~$P2-Term2-Project-FT.doc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SalesManagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SalesManagement/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesManagement/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/instructions/~$P2-Term2-Project-FT.doc" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5472">
-              <caret line="262" column="46" selection-start-line="262" selection-start-column="46" selection-end-line="262" selection-end-column="46" />
+            <state relative-caret-position="288">
+              <caret line="418" column="40" selection-start-line="418" selection-start-column="40" selection-end-line="418" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,23 +53,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/FoodMenuItemSaleReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="504">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding>
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="39">
-              <caret line="154" column="45" selection-start-line="154" selection-start-column="45" selection-end-line="154" selection-end-column="45" />
+              <caret line="274" column="41" selection-start-line="274" selection-start-column="41" selection-end-line="274" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-                <element signature="e#901#902#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,13 +78,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/Sale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="552">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
               <folding>
                 <element signature="e#175#176#0" expanded="true" />
                 <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="120">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -142,10 +136,10 @@
         <option value="$PROJECT_DIR$/src/SalesManagement/myStyle.css" />
         <option value="$PROJECT_DIR$/src/SalesManagement/sample.fxml" />
         <option value="$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java" />
-        <option value="$PROJECT_DIR$/src/SalesManagement/FoodMenuItemSaleReport.java" />
-        <option value="$PROJECT_DIR$/src/SalesManagement/Main.java" />
         <option value="$PROJECT_DIR$/src/SalesManagement/Sale.java" />
+        <option value="$PROJECT_DIR$/src/SalesManagement/FoodMenuItemSaleReport.java" />
         <option value="$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java" />
+        <option value="$PROJECT_DIR$/src/SalesManagement/Main.java" />
       </list>
     </option>
   </component>
@@ -161,7 +155,39 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sales_Management_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sales_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -180,14 +206,14 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christ\IdeaProjects\Sales_Management_App\src\res\instructions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Christ\IdeaProjects\Sales_Management_App\src\SalesManagement" />
       <recent name="C:\Users\Christ\IdeaProjects\Sales_Management_App\src\res\images" />
       <recent name="C:\Users\Christ\IdeaProjects\Sales_Management_App\src\res" />
       <recent name="C:\Users\Christ\IdeaProjects\Sales_Management_App\res\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Christ\IdeaProjects\Sales_Management_App\src\res\instructions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -255,12 +281,13 @@
       <workItem from="1557567854797" duration="13208000" />
       <workItem from="1557600403705" duration="10939000" />
       <workItem from="1558025732813" duration="6379000" />
-      <workItem from="1558035577461" duration="2773000" />
+      <workItem from="1558035577461" duration="5937000" />
+      <workItem from="1558086493310" duration="14000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79178000" />
+    <option name="totallyTimeSpent" value="96342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -276,8 +303,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866043" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.77880186" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.77880186" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -343,15 +370,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5472">
-          <caret line="262" column="46" selection-start-line="262" selection-start-column="46" selection-end-line="262" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/res/images/J_Logo.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/myStyle.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -362,41 +382,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/FoodMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="120">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/Sale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="552">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding>
             <element signature="e#175#176#0" expanded="true" />
             <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/FoodMenuItemSaleReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="504">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesManagement/AppFunctionalities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
-          <caret line="154" column="45" selection-start-line="154" selection-start-column="45" selection-end-line="154" selection-end-column="45" />
+          <caret line="274" column="41" selection-start-line="274" selection-start-column="41" selection-end-line="274" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SalesManagement/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="418" column="40" selection-start-line="418" selection-start-column="40" selection-end-line="418" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
